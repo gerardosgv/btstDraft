@@ -1,0 +1,89 @@
+/* ==========================================================================
+General
+========================================================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+  color: white !important;
+}
+
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 98%; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+
+
+.wrapper2 {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 90%; /* 2 */
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper3 {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 80%; /* 2 */
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+NAV
+========================================================================== */
+
+nav{
+  position: absolute;
+  width: 50%;
+  margin-left: 55%;
+  text-align: center;
+}
+
+.main-menu li{
+  display: inline-block;
+  text-decoration: none;
+  padding: 2% 3%;
+  color: white;
+  opacity: 0.88;
+}
+
+/* ==========================================================================
+Sections
+========================================================================== */
+
+.home{
+  height: 100vh;
+  background: #005aaa;
+}
+
+.about{
+  height: 100vh;
+  background: #005aaa;
+}
+
+.blog{
+  height: 100vh;
+  background: #005aaa;
+}
+
+.contact{
+  height: 100vh;
+  background: #005aaa;
+}
+
+.projects{
+  height: 100vh;
+  background: #005aaa;
+}
