@@ -42,3 +42,9 @@ $('#home').click(function(){
           $('.contact').hide()
           $('.projects').show()
      });
+
+//Mobile main-menu
+$('.burger-container').click(function(){
+     $('.mobile-menu-link').toggleClass("hide");
+     $('.line-2').toggleClass("expand");
+});

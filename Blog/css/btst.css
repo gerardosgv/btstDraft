@@ -1,0 +1,251 @@
+/* ==========================================================================
+General
+========================================================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+}
+
+h1{
+  color: white !important;
+}
+
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 98%; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+
+
+.wrapper2 {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 90%; /* 2 */
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper3 {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 80%; /* 2 */
+  margin: 0;
+  padding: 0;
+}
+
+.va{
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.spacer{
+  margin-bottom: 80px;
+}
+
+/* ==========================================================================
+NAV
+========================================================================== */
+
+nav{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  /*margin-left: 55%;*/
+  background: #141414;
+  text-align: center;
+  z-index: 3;
+}
+
+.logo{
+  position: absolute;
+  float: left;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.main-menu{
+  list-style: none;
+  width: 60% !important;
+  float: right;
+  text-align: right;
+}
+
+.main-menu li{
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 18px;
+  color: white;
+  opacity: 0.88;
+}
+
+.fullscreen-menu{
+  height: 65vh;
+  background: black;
+  z-index: 9999;
+  transition: all ease-in-out 0.6s;
+}
+
+.fullscreen-menu.hide{
+    /*height: 0;*/
+    display: none;
+    transition: all ease-in-out 0.6s;
+}
+
+.fullscreen-menu.hide ul{
+    display: none;
+    transition: all ease-in-out 0.9s;
+}
+
+.mobile-menu{
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 12%;
+}
+
+.mobile-menu li{
+  padding: 4%;
+  transition: all ease-in-out 0.9s;
+}
+
+.main-menu, .mobile-menu a{
+  font-size: 0.88em;
+}
+
+
+
+/* ==========================================================================
+Burger Menu
+========================================================================== */
+
+/* the tasty burger */
+.burger-menu {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: none;
+  float: right;
+}
+.burger {
+  position: absolute;
+  background: white;
+  opacity: .8;
+  width: 35px;
+  height: 2px;
+  top: 50%;
+  right: 0px;
+  margin-top: -2.5px;
+  opacity: 1;
+}
+.burger::before {
+  position: absolute;
+  background: white;
+  width: 35px;
+  height: 2px;
+  top: 10px;
+  content: "";
+  display: block;
+}
+.burger::after {
+  position: absolute;
+  background: white;
+  width: 35px;
+  height: 2px;
+  bottom: 10px;
+  content: "";
+  display: block;
+}
+.burger::after, .burger::before, .burger {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+}
+.burger-menu.menu-on .burger::after{
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+  bottom: 0px;
+  width: 35px;
+}
+.burger-menu.menu-on .burger::before{
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+  top: 0px;
+  width: 35px;
+}
+.burger-menu.menu-on .burger{
+ background: rgba(111,111,111,.0);
+}
+/* useless css */
+.burger-menu {
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.mobile-menu-container{
+  height: 80%
+}
+
+
+/* ==========================================================================
+Home
+========================================================================== */
+
+.header-banner{
+  height: 550px;
+}
+
+.hero-container{
+  margin-top: 210px;
+}
+
+.square-1{
+  height: 160px;
+  background: red;
+}
+
+.square-2{
+  height: 160px;
+  background: blue;
+}
+
+.videotxt{
+  border: none;
+}
+
+/* ==========================================================================
+Categories Template
+========================================================================== */
+
+.category-box{
+  box-shadow: none;
+}
+
+/* ==========================================================================
+Media Querys
+========================================================================== */
+
+@media screen and (min-width: 768px){
+  .fullscreen-menu{
+      display: none;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .main-menu{
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}

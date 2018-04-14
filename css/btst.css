@@ -1,0 +1,302 @@
+/* ==========================================================================
+General
+========================================================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+}
+
+h1{
+  color: white !important;
+}
+
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 98%; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+
+
+.wrapper2 {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 90%; /* 2 */
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper3 {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 80%; /* 2 */
+  margin: 0;
+  padding: 0;
+}
+
+.va{
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* ==========================================================================
+NAV
+========================================================================== */
+
+nav{
+  position: absolute;
+  width: 50%;
+  margin-left: 55%;
+  text-align: center;
+  z-index: 3;
+}
+
+.main-menu li{
+  display: inline-block;
+  text-decoration: none;
+  padding: 2% 3%;
+  color: white;
+  opacity: 0.88;
+}
+
+.line-2.expand{
+    width: 40px;
+}
+
+.line-1{
+    background: #000;
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 8px;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out 0.4s;
+}
+
+.line-2{
+    background: #000;
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 4px;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out 0.4s;
+}
+
+.burger-container{
+  cursor: pointer;
+  width: 50px;
+  margin-left: 88px;
+  margin-top: 22px;
+  display: none;
+  margin-left: calc(100% - 100px);
+}
+
+.hide{
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+}
+
+
+/* ==========================================================================
+Sections
+========================================================================== */
+
+.home{
+  height: 100vh;
+  background: #005aaa;
+}
+
+.about{
+  height: 100vh;
+  background: #005aaa;
+}
+
+.blog{
+  height: 100vh;
+  background: #005aaa;
+}
+
+.contact{
+  height: 100vh;
+  background: #005aaa;
+}
+
+.projects{
+  height: 100vh;
+  background: #005aaa;
+}
+
+/* ==========================================================================
+Home
+========================================================================== */
+
+.home{
+  background-color: black;
+}
+
+.home p{
+  color: white;
+  text-align: justify;
+}
+
+.home h1{
+  padding-bottom: 15px;
+}
+
+.home-text{
+  margin-top: 18%;
+  z-index: 2;
+}
+
+.subheadline{
+  font-size: 1.5rem;
+}
+
+.v-header{
+  /*height: 100vh;*/
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.home-container{
+  /*max-width: 960px;*/
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  background: black;
+}
+
+.fullscreen-video-wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.fullscreen-video-wrap video{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.header-overlay{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #005aaa;
+  opacity: 0.45;
+  z-index: 1;
+}
+
+/* ==========================================================================
+About
+========================================================================== */
+
+.about{
+  height: auto;
+  width: auto;
+  background: #005aaa;
+}
+
+.about p{
+  color: white;
+  text-align: justify;
+}
+
+.about h1{
+  padding-bottom: 15px;
+}
+
+
+/* ==========================================================================
+Blog
+========================================================================== */
+
+.blog-container{
+  margin-top: 5%;
+}
+
+
+/* ==========================================================================
+Contact
+========================================================================== */
+
+.contact-conteiner{
+  text-align: center;
+}
+
+.contact-conteiner label{
+  text-align: left;
+  color: white;
+}
+
+.contact-conteiner a{
+  color: white;
+}
+
+.form-container{
+  display: inline-block;
+  color: white;
+  width: 65%;
+}
+
+
+/* ==========================================================================
+Media Querys
+========================================================================== */
+
+@media screen and (max-width: 768px){
+  .home{
+    background-image: url('../img/home-mobile.jpg');
+    background-size: cover;
+    background-color: transparent !important;
+  }
+  .main-menu{
+    display: inline-block;
+    height: 45vh;
+    width: 100px;
+    margin-left: calc(100% - 150px);
+  }
+  .main-menu li{
+    padding: 25px;
+  }
+  .burger-container{
+    display: block;
+  }
+  .fullscreen-video-wrap{
+    display: none;
+  }
+  .header-overlay{
+    /*display: none;*/
+    background: #141414;
+    opacity: 0.3;
+  }
+  .home-container{
+    background: transparent
+  }
+}
+
+@media screen and (max-width: 768px){
+  .blog{
+    height: auto;
+  }
+}
