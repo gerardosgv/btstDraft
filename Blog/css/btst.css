@@ -193,7 +193,8 @@ Burger Menu
 }
 
 .mobile-menu-container{
-  height: 80%
+  height: 80%;
+  background: black;
 }
 
 

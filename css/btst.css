@@ -56,59 +56,141 @@ NAV
 
 nav{
   position: absolute;
-  width: 50%;
-  margin-left: 55%;
+  width: 100%;
+  height: 50px;
+  /*margin-left: 55%;*/
+  background: #141414;
   text-align: center;
   z-index: 3;
+}
+
+.logo{
+  position: absolute;
+  float: left;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.main-menu{
+  list-style: none;
+  width: 60% !important;
+  float: right;
+  text-align: right;
 }
 
 .main-menu li{
   display: inline-block;
   text-decoration: none;
-  padding: 2% 3%;
+  padding: 12px 18px;
   color: white;
   opacity: 0.88;
 }
 
-.line-2.expand{
-    width: 40px;
+.mobile-menu{
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 12%;
 }
 
-.line-1{
-    background: #000;
-    display: block;
-    width: 40px;
-    height: 4px;
-    margin-bottom: 8px;
-    position: relative;
-    top: 0;
-    transition: all ease-in-out 0.4s;
+.mobile-menu li{
+  padding: 4%;
+  transition: all ease-in-out 0.9s;
 }
 
-.line-2{
-    background: #000;
-    display: block;
-    width: 30px;
-    height: 4px;
-    margin-bottom: 4px;
-    position: relative;
-    top: 0;
-    transition: all ease-in-out 0.4s;
+.main-menu, .mobile-menu a{
+  font-size: 0.88em;
 }
 
-.burger-container{
-  cursor: pointer;
+.fullscreen-menu {
+    height: 65vh;
+    background: #141414;;
+    z-index: 9999;
+    transition: all ease-in-out 0.6s;
+}
+
+.fullscreen-menu.hide{
+    /*height: 0;*/
+    display: none;
+    transition: all ease-in-out 0.6s;
+}
+
+.fullscreen-menu.hide ul{
+    display: none;
+    transition: all ease-in-out 0.9s;
+}
+
+/* ==========================================================================
+Burger Menu
+========================================================================== */
+
+/* the tasty burger */
+.burger-menu {
+  position: relative;
   width: 50px;
-  margin-left: 88px;
-  margin-top: 22px;
+  height: 50px;
+  cursor: pointer;
   display: none;
-  margin-left: calc(100% - 100px);
+  float: right;
+}
+.burger {
+  position: absolute;
+  background: white;
+  opacity: .8;
+  width: 35px;
+  height: 2px;
+  top: 50%;
+  right: 0px;
+  margin-top: -2.5px;
+  opacity: 1;
+}
+.burger::before {
+  position: absolute;
+  background: white;
+  width: 35px;
+  height: 2px;
+  top: 10px;
+  content: "";
+  display: block;
+}
+.burger::after {
+  position: absolute;
+  background: white;
+  width: 35px;
+  height: 2px;
+  bottom: 10px;
+  content: "";
+  display: block;
+}
+.burger::after, .burger::before, .burger {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+}
+.burger-menu.menu-on .burger::after{
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+  bottom: 0px;
+  width: 35px;
+}
+.burger-menu.menu-on .burger::before{
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+  top: 0px;
+  width: 35px;
+}
+.burger-menu.menu-on .burger{
+ background: rgba(111,111,111,.0);
+}
+/* useless css */
+.burger-menu {
+  margin-left:auto;
+  margin-right: auto;
 }
 
-.hide{
-    opacity: 0;
-    transition: all ease-in-out 0.2s;
+.mobile-menu-container{
+  height: 80%;
+  background: #141414;
 }
+
 
 
 /* ==========================================================================
@@ -271,13 +353,10 @@ Media Querys
     background-color: transparent !important;
   }
   .main-menu{
-    display: inline-block;
-    height: 45vh;
-    width: 100px;
-    margin-left: calc(100% - 150px);
+    display: none;
   }
-  .main-menu li{
-    padding: 25px;
+  .burger-menu {
+    display: block;
   }
   .burger-container{
     display: block;
@@ -293,10 +372,13 @@ Media Querys
   .home-container{
     background: transparent
   }
-}
-
-@media screen and (max-width: 768px){
   .blog{
     height: auto;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .fullscreen-menu{
+      display: none;
   }
 }
